@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\I Can Rewrite The Story.props" />
+</Project>
