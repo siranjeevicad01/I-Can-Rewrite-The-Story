@@ -4,11 +4,11 @@ using I_Can_Rewrite_The_Story.Models;
 
 namespace I_Can_Rewrite_The_Story.Controllers;
 
-public class LoginController : Controller
+public class AdminController : Controller
 {
-    private readonly ILogger<LoginController> _logger;
+    private readonly ILogger<AdminController> _logger;
 
-    public LoginController(ILogger<LoginController> logger)
+    public AdminController(ILogger<AdminController> logger)
     {
         _logger = logger;
     }
@@ -23,22 +23,22 @@ public class LoginController : Controller
         return View();
     }
 
-    public IActionResult Services()
+    public IActionResult MyTask()
     {
         return View();
     }
 
-    public IActionResult ContactUs()
+    public IActionResult ManageSession()
     {
         return View();
     }
 
-    public IActionResult Login()
+    public IActionResult Reports()
     {
         return View();
     }
 
-    public IActionResult Register()
+    public IActionResult Settings()
     {
         return View();
     }

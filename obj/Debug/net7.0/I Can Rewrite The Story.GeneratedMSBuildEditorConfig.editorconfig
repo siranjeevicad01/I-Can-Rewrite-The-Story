@@ -16,12 +16,76 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Admin/ManageSession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlU2Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Admin/ManageUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Admin/MyTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXlUYXNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Admin/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVwb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Admin/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQWJvdXRVcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ29udGFjdFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUHJpdmFjeS5jc2h0bWw=
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Login/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Senior/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuaW9yXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Senior/ManageJuniors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuaW9yXE1hbmFnZUp1bmlvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Senior/MyTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuaW9yXE15VGFzay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Senior/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuaW9yXFByb2plY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Senior/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuaW9yXFJlcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Senior/SheduleSession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuaW9yXFNoZWR1bGVTZXNzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Shared/Error.cshtml]
@@ -40,6 +104,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-nyq0itc5mb
+
 [C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-b74td51xox
+
+[C:/Users/SIRANJEEVICAD01/Desktop/CadBatch01/I Can Rewrite The Story/Views/Shared/_LayoutSenior.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTZW5pb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8ewyozkenj

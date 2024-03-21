@@ -404,3 +404,5 @@ C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story\obj\Debug\ne
 C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story\obj\Debug\net7.0\I Can Rewrite The Story.pdb
 C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story\obj\Debug\net7.0\I Can Rewrite The Story.genruntimeconfig.cache
 C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story\obj\Debug\net7.0\ref\I Can Rewrite The Story.dll
+C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+C:\Users\SIRANJEEVICAD01\Desktop\CadBatch01\I Can Rewrite The Story\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutSenior.cshtml.rz.scp.css
