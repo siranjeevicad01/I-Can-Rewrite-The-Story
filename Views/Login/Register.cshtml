@@ -1,3 +1,48 @@
 ﻿@{
-    ViewData["Title"] = "Login Page";
+    ViewData["Title"] = "Register Page";
 }
+
+
+
+    <div id="Register">
+        <h3 class="text-center text-white pt-5">Register Form</h3>
+        <div class="container">
+            <div id="Register-row" class="row justify-content-center align-items-center">
+                <div id="Register-column" class="col-md-6">
+                    <div id="Register-box" class="col-md-12">
+                        <form id="Register-form" class="form" action="" method="post">
+                            
+                            <div class="form-group">
+                                <label for="Firstname" class="text-info">Firstname:</label><br>
+                                <input type="text" name="Firstname" id="Firstname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="Lastname" class="text-info">Lastname:</label><br>
+                                <input type="text" name="Lastname" id="Lastname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="Username" class="text-info">Username:</label><br>
+                                <input type="text" name="Username" id="Username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email" class="text-info">Email:</label><br>
+                                <input type="Email" name="Email" id="Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="Password" class="text-info">Password:</label><br>
+                                <input type="text" name="Password" id="Password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="have-account" class="text-info"><span>Already have an account</span> </label><br>
+                                <label for="remember-me" class="text-info"><span>Terms and Condition</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="#" class="text-info">Login here</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

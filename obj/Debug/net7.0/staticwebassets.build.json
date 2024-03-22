@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OLDDVQx3fZ72pS0hrDcbkUL1bmyvZRDawDtyDpN0Kiw=",
+  "Hash": "CXyLpWmv0OvBXGJI2pNPo/7/fZp07qpFnJOBkNDxJYM=",
   "Source": "I Can Rewrite The Story",
   "BasePath": "_content/I Can Rewrite The Story",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\SIRANJEEVICAD01\\Desktop\\CadBatch01\\I Can Rewrite The Story\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\I Can Rewrite The Story.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\SIRANJEEVICAD01\\Desktop\\CadBatch01\\I Can Rewrite The Story\\wwwroot\\css\\Login.css",
+      "SourceId": "I Can Rewrite The Story",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SIRANJEEVICAD01\\Desktop\\CadBatch01\\I Can Rewrite The Story\\wwwroot\\",
+      "BasePath": "_content/I Can Rewrite The Story",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
       "Identity": "C:\\Users\\SIRANJEEVICAD01\\Desktop\\CadBatch01\\I Can Rewrite The Story\\wwwroot\\css\\site.css",

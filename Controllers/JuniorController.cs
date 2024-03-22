@@ -4,11 +4,11 @@ using I_Can_Rewrite_The_Story.Models;
 
 namespace I_Can_Rewrite_The_Story.Controllers;
 
-public class SeniorController : Controller
+public class JuniorController : Controller
 {
-    private readonly ILogger<SeniorController> _logger;
+    private readonly ILogger<JuniorController> _logger;
 
-    public SeniorController(ILogger<SeniorController> logger)
+    public JuniorController(ILogger<JuniorController> logger)
     {
         _logger = logger;
     }
