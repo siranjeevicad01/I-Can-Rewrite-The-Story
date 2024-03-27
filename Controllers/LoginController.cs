@@ -5,13 +5,15 @@ using Microsoft.Data.SqlClient;
 
 namespace I_Can_Rewrite_The_Story.Controllers;
 
-SqlConnection con=new SqlConnection();
-    SqlCommand com=new SqlCommand();
-    SqlDataReader? dr;
+
 
 public class LoginController : Controller
 {
     private readonly ILogger<LoginController> _logger;
+
+    SqlConnection con=new SqlConnection();
+    SqlCommand com=new SqlCommand();
+    SqlDataReader? dr;
 
     public LoginController(ILogger<LoginController> logger)
     {
@@ -50,7 +52,7 @@ public class LoginController : Controller
     }
     
     void ConnectionString(){
-    con.ConnectionString = "Data Source=192.168.1.240\\SQLEXPRESS;Initial Catalog=RMS;User ID=CADBATCH01;Password=CAD@123pass;TrustServerCertificate=True;";
+    con.ConnectionString = "Data Source=192.168.1.240\\SQLEXPRESS; database=RMS; User ID=CADBATCH01; Password=CAD@123pass; TrustServerCertificate=True;";
     }
     
     [HttpPost]
@@ -60,12 +62,13 @@ public class LoginController : Controller
         con.Open();
         com.Connection=con;
         com.CommandText="insert into Usr_Reg(FirstName,LastName,User_name,Email_Id,Password) values(@FirstName,@LastName,@User_name,@Email_Id,@Password)";
-        com.Parameters.AddwithValue("@FirstName",rmodel.FirstName);
-        com.Parameters.AddwithValue("@LastName",rmodel.LastName);
-        com.Parameters.AddwithValue("@User_name",rmodel.User_name);
-        com.Parameters.AddwithValue("@Email_Id",rmodel.Email_Id);
-        com.Parameters.AddwithValue("@Password",rmodel.Password);
-        int rowAffected=cmd.ExecuteNonquery();
+        com.Parameters.AddWithValue("@FirstName",rmodel.FirstName);
+        com.Parameters.AddWithValue("@LastName",rmodel.LastName);
+        com.Parameters.AddWithValue("@User_name",rmodel.User_name);
+        com.Parameters.AddWithValue("@Email_Id",rmodel.Email_Id);
+        com.Parameters.AddWithValue("@Password",rmodel.Password);
+
+        int rowAffected=com.ExecuteNonQuery();
         if(rowAffected>0){
             con.Close();
             return RedirectToAction("Login");
@@ -73,7 +76,7 @@ public class LoginController : Controller
         else
         {
             con.Close();
-            return view("Error");
+            return View("Error");
         }
     }
 
