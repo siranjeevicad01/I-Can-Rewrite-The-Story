@@ -4,118 +4,59 @@
 
 
 
-    <div id="Register">
-    <form action="RegisterDB" method="Post">
-        <h3 class="text-center text-white pt-5">Register Form</h3>
-        <div class="container">
-            <div id="Register-row" class="row justify-content-center align-items-center">
-                <div id="Register-column" class="col-md-6">
-                    <div id="Register-box" class="col-md-12">
-                        <form id="Register-form" class="form" action="" method="post">
-                            
-                            <div class="form-group">
-                                <label for="Firstname" class="text-info">Firstname:</label><br>
-                                <input type="text" name="Firstname" id="Firstname" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="Lastname" class="text-info">Lastname:</label><br>
-                                <input type="text" name="Lastname" id="Lastname" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="Username" class="text-info">Username:</label><br>
-                                <input type="text" name="User_name" id="Username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="Email" class="text-info">Email:</label><br>
-                                <input type="Email" name="Email_Id" id="Email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="Password" class="text-info">Password:</label><br>
-                                <input type="text" name="Password" id="Password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="have-account" class="text-info"><span>Already have an account</span> </label><br>
-                                <label for="remember-me" class="text-info"><span>Terms and Condition</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Login here</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-    </div>
-
-
-    <div class="card bg-light">
-    <article class="card-body mx-auto" style="max-width: 400px;">
-	<h4 class="card-title mt-3 text-center">Create Account</h4>
-	<p class="text-center">Get started with your free account</p>
-	<p>
-		<a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-		<a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-	</p>
-	<p class="divider-text">
-        <span class="bg-light">OR</span>
-    </p>
-	<form action="RegisterDB" method="Post">
-	<div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-		 </div>
-        <input name="" class="form-control" name="Firstname" placeholder="First Name" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Email address" type="email">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+<div class="signin">
+    <div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div>
+			</div>
+			<div class="card-body">
+				<form action="RegisterDB" method="Post">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" name="User_name" class="form-control" placeholder="User Name">
+						
+					</div>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+						</div>
+						<input type="text" name="Email_Id" class="form-control" placeholder="Email Address">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="Create_Password" class="form-control" placeholder="Create password">
+					</div>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="Repeat_Password" class="form-control" placeholder="Repeat password">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Create Account" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Have an account?<a href="#">Log In</a>
+				</div>
+			</div>
 		</div>
-		<select class="custom-select" style="max-width: 120px;">
-		    <option selected="">+91</option>
-		    <option value="1">+972</option>
-		    <option value="2">+198</option>
-		    <option value="3">+701</option>
-		</select>
-    	<input name="" class="form-control" placeholder="Phone number" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-		</div>
-		<select class="form-control">
-			<option selected=""> Select job type</option>
-			<option>Designer</option>
-			<option>Manager</option>
-			<option>Accaunting</option>
-		</select>
-	</div> <!-- form-group end.// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Create password" type="password">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Repeat password" type="password">
-    </div> <!-- form-group// -->                                      
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
-    </div> <!-- form-group// -->      
-    <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
-</form>
-</article>
-</div> <!-- card.// -->
-
-</div> 
-<!--container end.//-->
+	</div>
+</div>

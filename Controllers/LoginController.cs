@@ -61,12 +61,11 @@ public class LoginController : Controller
         ConnectionString();
         con.Open();
         com.Connection=con;
-        com.CommandText="insert into Usr_Reg(FirstName,LastName,User_name,Email_Id,Password) values(@FirstName,@LastName,@User_name,@Email_Id,@Password)";
-        com.Parameters.AddWithValue("@FirstName",rmodel.FirstName);
-        com.Parameters.AddWithValue("@LastName",rmodel.LastName);
+        com.CommandText="insert into Usr_Reg(User_name,Email_Id,Create_Password,Repeat_Password) values(@User_name,@Email_Id,@Create_Password,@Repeat_Password)";
         com.Parameters.AddWithValue("@User_name",rmodel.User_name);
         com.Parameters.AddWithValue("@Email_Id",rmodel.Email_Id);
-        com.Parameters.AddWithValue("@Password",rmodel.Password);
+        com.Parameters.AddWithValue("@Create_Password",rmodel.Create_Password);
+        com.Parameters.AddWithValue("@Repeat_Password",rmodel.Repeat_Password);
 
         int rowAffected=com.ExecuteNonQuery();
         if(rowAffected>0){
