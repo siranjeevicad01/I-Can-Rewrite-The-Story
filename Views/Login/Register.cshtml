@@ -1,4 +1,4 @@
-﻿@model I_Can_Rewrite_The_Story.RegisterModel
+﻿
 @{
     ViewData["Title"] = "Register Page";
 }
@@ -10,18 +10,18 @@
                 <div class="card-header">
                     <h3>Sign In</h3>
                     <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
+                        <span><i class="fa-solid fa-facebook-square"></i></span>
+                        <span><i class="fa-solid fa-google-plus-square"></i></span>
+                        <span><i class="fa-solid fa-twitter-square"></i></span>
                     </div>
                 </div>
                 <div class="card-body">
                     <form asp-action="RegisterDB" method="post">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
                             </div>
-                            <input type="text" asp-for="User_name" class="form-control" placeholder="User Name">
+                            <input type="text" asp-for="User_name"  class="form-control" placeholder="User Name">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
@@ -31,13 +31,13 @@
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             </div>
                             <input type="password" asp-for="Create_Password" class="form-control" placeholder="Create password">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             </div>
                             <input type="password" asp-for="Repeat_Password" class="form-control" placeholder="Repeat password">
                         </div>
