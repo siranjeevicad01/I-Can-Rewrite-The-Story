@@ -46,49 +46,7 @@ namespace I_Can_Rewrite_The_Story.Controllers
             return View();
         }
 
-
-
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult RegisterDB(RegisterModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
-            try
-            {
-                // Map the UserRegistration model to a new User entity
-                var user = new User
-                {
-                    User_name = model.User_name,
-                    Email_Id = model.Email_Id,
-                    Create_Password = model.Create_Password,
-                    Repeat_Password = model.Repeat_Password
-                };
-
-                // Add the user to the database context
-                _context.Users.Add(user);
-
-                // Save changes to the database
-                _context.SaveChanges();
-
-                // Redirect to the login action
-                return RedirectToAction("SignIn", "Login"); // Assuming you have a login action in an AccountController
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred while registering user: {ex.Message}");
-                return View("Error");
-            }
-        }
-        
+ 
         // [HttpGet]
         // public IActionResult Register()
         // {
@@ -135,11 +93,6 @@ namespace I_Can_Rewrite_The_Story.Controllers
         //         return View("Error");
         //     }
         // }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

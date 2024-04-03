@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace I_Can_Rewrite_The_Story 
+namespace I_Can_Rewrite_The_Story.Models 
 {
     public class ApplicationDbContext : DbContext
     {
@@ -8,20 +8,21 @@ namespace I_Can_Rewrite_The_Story
         {
         }
 
-        // Define your database tables as DbSet properties here
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserRegistration>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+        }
+
         
-        public DbSet<RegisterModel> Usr_Reg { get; set; }
+        // DbSet for UserRegistration entity
+        public DbSet<UserRegistration> UserRegistrations { get; set; }
 
-        // Optionally, you can override the OnModelCreating method to configure the model
-        // protected override void OnModelCreating(ModelBuilder modelBuilder)
-        // {
-        //     base.OnModelCreating(modelBuilder);
-        //
-        //     // Configure your entity relationships, indexes, etc. here
-        // }
+        public DbSet<UserRegistration> Users { get; set; }
 
-        // Add additional DbSet properties for each entity in your database
-        // Example:
-        // public DbSet<Order> Orders { get; set; }
+
+        // DbSet for LoginModel entity
+        public DbSet<LoginModel> Login { get; set; }
     }
 }
