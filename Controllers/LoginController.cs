@@ -10,12 +10,21 @@ namespace I_Can_Rewrite_The_Story.Controllers
     public class LoginController : Controller
     {
         private readonly ILogger<LoginController> _logger;
-        private readonly string _connectionString = "Data Source=192.168.1.240\\SQLEXPRESS; database=RMS; User ID=CADBATCH01; Password=CAD@123pass; TrustServerCertificate=True;";
+        // private readonly string _connectionString = "Data Source=192.168.1.240\\SQLEXPRESS; database=RMS; User ID=CADBATCH01; Password=CAD@123pass; TrustServerCertificate=True;";
 
         public LoginController(ILogger<LoginController> logger)
         {
             _logger = logger;
         }
+
+
+        private readonly ApplicationDbContext _context;
+
+        public LoginController(ILogger<LoginController> logger, ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
 
         public IActionResult Index()
         {
@@ -37,56 +46,99 @@ namespace I_Can_Rewrite_The_Story.Controllers
             return View();
         }
 
-        public IActionResult Login()
-        {
-            return View();
-        }
-        
+
+
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
-        
+
         [HttpPost]
-        public IActionResult Register(RegisterDB rmodel)
+        public IActionResult RegisterDB(RegisterModel model)
         {
             if (!ModelState.IsValid)
             {
-                // If the model is not valid, return the Register view with validation errors
-                return View(rmodel);
+                return View(model);
             }
-            
+
             try
             {
-                using (SqlConnection con = new SqlConnection(_connectionString))
+                // Map the UserRegistration model to a new User entity
+                var user = new User
                 {
-                    con.Open();
-                    using (SqlCommand com = con.CreateCommand())
-                    {
-                        com.CommandText = "INSERT INTO Usr_Reg (User_name, Email_Id, Create_Password, Repeat_Password) VALUES (@User_name, @Email_Id, @Create_Password, @Repeat_Password)";
-                        com.Parameters.AddWithValue("@User_name", rmodel.User_name);
-                        com.Parameters.AddWithValue("@Email_Id", rmodel.Email_Id);
-                        com.Parameters.AddWithValue("@Create_Password", rmodel.Create_Password);
-                        com.Parameters.AddWithValue("@Repeat_Password", rmodel.Repeat_Password);
-                        int rowsAffected = com.ExecuteNonQuery();
+                    User_name = model.User_name,
+                    Email_Id = model.Email_Id,
+                    Create_Password = model.Create_Password,
+                    Repeat_Password = model.Repeat_Password
+                };
 
-                        if (rowsAffected > 0)
-                        {
-                            return RedirectToAction("Login");
-                        }
-                        else
-                        {
-                            return View("Error");
-                        }
-                    }
-                }
+                // Add the user to the database context
+                _context.Users.Add(user);
+
+                // Save changes to the database
+                _context.SaveChanges();
+
+                // Redirect to the login action
+                return RedirectToAction("SignIn", "Login"); // Assuming you have a login action in an AccountController
             }
             catch (Exception ex)
             {
                 _logger.LogError($"An error occurred while registering user: {ex.Message}");
                 return View("Error");
             }
+        }
+        
+        // [HttpGet]
+        // public IActionResult Register()
+        // {
+        //     return View();
+        // }
+        
+        // [HttpPost]
+        // public IActionResult Register(RegisterDB rmodel)
+        // {
+        //     if (!ModelState.IsValid)
+        //     {
+        //         // If the model is not valid, return the Register view with validation errors
+        //         return View(rmodel);
+        //     }
+            
+        //     try
+        //     {
+        //         using (SqlConnection con = new SqlConnection(_connectionString))
+        //         {
+        //             con.Open();
+        //             using (SqlCommand com = con.CreateCommand())
+        //             {
+        //                 com.CommandText = "INSERT INTO Usr_Reg (User_name, Email_Id, Create_Password, Repeat_Password) VALUES (@User_name, @Email_Id, @Create_Password, @Repeat_Password)";
+        //                 com.Parameters.AddWithValue("@User_name", rmodel.User_name);
+        //                 com.Parameters.AddWithValue("@Email_Id", rmodel.Email_Id);
+        //                 com.Parameters.AddWithValue("@Create_Password", rmodel.Create_Password);
+        //                 com.Parameters.AddWithValue("@Repeat_Password", rmodel.Repeat_Password);
+        //                 int rowsAffected = com.ExecuteNonQuery();
+
+        //                 if (rowsAffected > 0)
+        //                 {
+        //                     return RedirectToAction("Login");
+        //                 }
+        //                 else
+        //                 {
+        //                     return View("Error");
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         _logger.LogError($"An error occurred while registering user: {ex.Message}");
+        //         return View("Error");
+        //     }
+        // }
+
+        public IActionResult Login()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

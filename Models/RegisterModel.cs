@@ -4,6 +4,9 @@ namespace I_Can_Rewrite_The_Story.Models;
 
 public class RegisterDB
 {
+    [key]
+    public int Reg_ID { get; set; }
+
     [Required(ErrorMessage = "User name is required")]
     public string User_name { get; set; }
 

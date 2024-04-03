@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Register Page";
 }
 
@@ -16,42 +15,43 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form asp-action="RegisterDB" method="post">
+                    <form action="@Url.Action("RegisterDB","Login")" method="post">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
                             </div>
-                            <input type="text" asp-for="User_name"  class="form-control" placeholder="User Name">
+                            <input type="text" asp-for="User_name" name="User_name" class="form-control" placeholder="User Name">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
                             </div>
-                            <input type="text" asp-for="Email_Id" class="form-control" placeholder="Email Address">
+                            <input type="email" asp-for="Email_Id" name="Email_Id" class="form-control" placeholder="Email Address">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             </div>
-                            <input type="password" asp-for="Create_Password" class="form-control" placeholder="Create password">
+                            <input type="password" asp-for="Create_Password" name="Create_Password" class="form-control" placeholder="Create password">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             </div>
-                            <input type="password" asp-for="Repeat_Password" class="form-control" placeholder="Repeat password">
+                            <input type="password" asp-for="Repeat_Password" name="Repeat_Password" class="form-control" placeholder="Repeat password">
                         </div>
                         <div class="row align-items-center remember">
-                            <input type="checkbox">Remember Me
+                            <input type="checkbox" id="rememberMe"> <!-- Added id attribute -->
+                            <label for="rememberMe">Remember Me</label> <!-- Added label for checkbox -->
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Create Account" class="btn float-right login_btn">
+                            <button type="submit" class="btn float-right login_btn">Create Account</button> <!-- Changed input type to button -->
                         </div>
                     </form>
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Have an account?<a href="#">Log In</a>
+                        Have an account? <a href="#">Log In</a>
                     </div>
                 </div>
             </div>
