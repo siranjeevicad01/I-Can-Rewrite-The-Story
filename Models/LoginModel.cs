@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace I_Can_Rewrite_The_Story.Models // Replace YourNamespace with the namespace of your application
+namespace I_Can_Rewrite_The_Story.Models 
 {
     public class LoginModel
     {

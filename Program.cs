@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using I_Can_Rewrite_The_Story.Models; // Update with the correct namespace for your models
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,10 +16,10 @@ var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
 
-
 builder.Services.AddSingleton(configuration);
 
-builder.services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))); // Corrected access to configuration
 
 var app = builder.Build();
 

@@ -10,16 +10,16 @@ namespace I_Can_Rewrite_The_Story.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserRegistration>()
+            modelBuilder.Entity<UserRegistrationModel>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
         }
 
         
         // DbSet for UserRegistration entity
-        public DbSet<UserRegistration> UserRegistrations { get; set; }
 
-        public DbSet<UserRegistration> Users { get; set; }
+
+        public DbSet<UserRegistrationModel> UserRegistration { get; set; }
 
 
         // DbSet for LoginModel entity

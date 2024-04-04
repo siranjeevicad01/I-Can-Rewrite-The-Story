@@ -7,7 +7,7 @@
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3>Sign In</h3>
+                    <h3>Register</h3>
                     <div class="d-flex justify-content-end social_icon">
                         <span><i class="fa-solid fa-facebook-square"></i></span>
                         <span><i class="fa-solid fa-google-plus-square"></i></span>
@@ -15,37 +15,37 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="@Url.Action("RegisterDB","Login")" method="post">
+                    <form action="RegisterDB" method="post"> 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
                             </div>
-                            <input type="text" asp-for="User_name" name="User_name" class="form-control" placeholder="User Name">
+                            <input type="text" name="UserName" class="form-control" placeholder="User Name">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
                             </div>
-                            <input type="email" asp-for="Email_Id" name="Email_Id" class="form-control" placeholder="Email Address">
+                            <input type="email" name="Email" class="form-control" placeholder="Email Address">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             </div>
-                            <input type="password" asp-for="Create_Password" name="Create_Password" class="form-control" placeholder="Create password">
+                            <input type="password" name="Password" class="form-control" placeholder="Password">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             </div>
-                            <input type="password" asp-for="Repeat_Password" name="Repeat_Password" class="form-control" placeholder="Repeat password">
+                            <input type="password" name="ConfirmPassword" class="form-control" placeholder="Confirm Password">
                         </div>
                         <div class="row align-items-center remember">
-                            <input type="checkbox" id="rememberMe"> <!-- Added id attribute -->
-                            <label for="rememberMe">Remember Me</label> <!-- Added label for checkbox -->
+                            <input type="checkbox" for="RememberMe"> 
+                            <label for="RememberMe">Remember Me</label> 
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn float-right login_btn">Create Account</button> <!-- Changed input type to button -->
+                            <button type="submit" class="btn float-right login_btn">Create Account</button>
                         </div>
                     </form>
                 </div>
