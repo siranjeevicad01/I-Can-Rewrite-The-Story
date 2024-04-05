@@ -8,12 +8,12 @@ namespace I_Can_Rewrite_The_Story.Models
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<UserRegistrationModel>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
-        }
+        // protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     modelBuilder.Entity<UserRegistrationModel>()
+        //         .HasIndex(u => u.Email)
+        //         .IsUnique();
+        // }
 
         
         // DbSet for UserRegistration entity

@@ -52,12 +52,11 @@ namespace I_Can_Rewrite_The_Story.Controllers
 
         public IActionResult Register()
         {
-            return View();
+            return View("Register","_LayoutLogin");
         }
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult RegisterDB(UserRegistrationModel rmodel)
         {
             if (ModelState.IsValid)
@@ -71,8 +70,7 @@ namespace I_Can_Rewrite_The_Story.Controllers
                 }
 
                 // If not, proceed with registration
-                var newUser = new UserRegistrationModel
-                {
+                var newUser = new UserRegistrationModel{
                     UserName = rmodel.UserName,
                     Email = rmodel.Email,
                     Password = rmodel.Password
@@ -83,51 +81,49 @@ namespace I_Can_Rewrite_The_Story.Controllers
 
                 // _logger.LogInformation($"User {newUser.Email} registered successfully.");
 
-                return RedirectToAction("Login");
+                return View("Login");
             }
 
             else
             {
-                return View("Error");
+                return View(rmodel);
             }
 
         }
         
         [HttpGet]
+        [Route("Login/Login")]
         public IActionResult Login()
         {
             return View();
         }
 
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Login(LoginModel model)
+            [HttpPost]
+    public IActionResult LoginDB(LoginModel lmodel)
+    {
+        if (ModelState.IsValid)
         {
-            if (ModelState.IsValid)
+            var user = _context.UserRegistration.FirstOrDefault(u => u.Email == lmodel.Email && u.Password == lmodel.Password);
+
+            if (user != null)
             {
-                var user = _context.UserRegistration.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
-                if (user != null)
-                {
-                    // Log user in
-                    // For example, you can set a session variable or cookie to indicate the user is logged in
-                    HttpContext.Session.SetString("UserId", user.Id.ToString());
-
-                    // _logger.LogInformation($"User {user.Email} logged in successfully.");
-
-                    return RedirectToAction("Index", "Home"); // Redirect to the homepage after login
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid email or password.");
-                }
+                // Authentication successful, redirect to a dashboard or home page
+                return RedirectToAction("Dashboard", "Admin");
             }
-
-            return View(model);
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid email or password");
+                return View(lmodel);
+            }
         }
+        else
+        {
+            return View(lmodel);
+        }
+    }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
             // Clear session or cookie to indicate user logout
@@ -140,7 +136,7 @@ namespace I_Can_Rewrite_The_Story.Controllers
         
   
 
-    }
+    
         
         // [HttpPost]
         // public IActionResult Register(RegisterDB rmodel)
@@ -188,5 +184,7 @@ namespace I_Can_Rewrite_The_Story.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+    }
 }
 

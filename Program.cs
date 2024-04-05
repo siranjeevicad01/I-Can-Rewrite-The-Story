@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using I_Can_Rewrite_The_Story.Models; // Update with the correct namespace for your models
+using I_Can_Rewrite_The_Story.Models; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +19,7 @@ var configuration = new ConfigurationBuilder()
 builder.Services.AddSingleton(configuration);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))); // Corrected access to configuration
+    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))); 
 
 var app = builder.Build();
 
@@ -27,7 +27,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Login/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    
     app.UseHsts();
 }
 
